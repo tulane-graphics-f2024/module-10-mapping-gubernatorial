@@ -23,7 +23,7 @@ GLuint program;
 //Trackball movement
 Trackball tb;
 
-// Texture objects references
+// Texture objects retrferences
 GLuint month_texture;
 GLuint night_texture;
 GLuint cloud_texture;
@@ -318,12 +318,12 @@ void init(){
 }
 
 void animate(){
-  //Do 30 times per second
+  // Do 30 times per second
   if(glfwGetTime() > (1.0/60.0)){
+    animate_time += 0.0001;
+    rotation_angle += 0.25;
 
-    animate_time = animate_time + 0.0001;
-    rotation_angle  = rotation_angle + 0.25;
-
+    // Reset the time to keep animations smooth
     glfwSetTime(0.0);
   }
 }
@@ -403,8 +403,12 @@ int main(void){
     // ====== Draw ======
     glBindVertexArray(vao);
     
-    glUniformMatrix4fv( ModelViewEarth, 1, GL_TRUE, user_MV*mesh->model_view);
-    glUniformMatrix4fv( ModelViewLight, 1, GL_TRUE, user_MV*mesh->model_view);
+      // Calculate rotation for the light source
+    mat4 light_rotation = RotateY(rotation_angle);
+
+      // Update the ModelView matrix for the light
+    glUniformMatrix4fv(ModelViewEarth, 1, GL_TRUE, user_MV * mesh->model_view);
+    glUniformMatrix4fv(ModelViewLight, 1, GL_TRUE, user_MV * light_rotation * mesh->model_view);
     glUniformMatrix4fv( Projection, 1, GL_TRUE, projection );
     glUniformMatrix4fv( NormalMatrix, 1, GL_TRUE, transpose(invert(user_MV*mesh->model_view)));
 
