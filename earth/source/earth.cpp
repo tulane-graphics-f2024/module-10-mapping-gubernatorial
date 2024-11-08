@@ -238,17 +238,22 @@ void init(){
   glGenTextures( 1, &night_texture );
   glGenTextures( 1, &cloud_texture );
   glGenTextures( 1, &perlin_texture);
-  
-  std::string earth_img = source_path + "/images/checkerboard.png";
+  //Now you’ll need to blend the clouds using the following cloud map: Note that in the map white represents clouds (which makes sense). You’ll need to blend the world texture with a new texture created for the clouds. Blending can be done by just adding the colors from both textures together, but make sure you also “clamp” the value of this addition to be at most 1.0.
+  std::string earth_img = source_path +  "/images/world.200405.3.png";
   loadFreeImageTexture(earth_img.c_str(), month_texture, GL_TEXTURE0);
     
+  std::string cloud_img = source_path +  "/images/cloud_combined.png";
+  loadFreeImageTexture(cloud_img.c_str(), cloud_texture, GL_TEXTURE1);
+
+  std::string night_img = source_path +  "/images/BlackMarble.png";
+  loadFreeImageTexture(night_img.c_str(), night_texture, GL_TEXTURE2);
+    
+    
   glUniform1i( glGetUniformLocation(program, "textureEarth"), 0 );
+  glUniform1i( glGetUniformLocation(program, "textureCloud"), 1 );
+  glUniform1i( glGetUniformLocation(program, "textureNight"), 2 );
 
-  //TODO: ADD NIGHT TEXTURE
-
-  //TODO: ADD CLOUD TEXTURE
   
-  //TODO: ADD NOISE TEXTURE
 
   glBindVertexArray( vao );
   glBindBuffer( GL_ARRAY_BUFFER, buffer );

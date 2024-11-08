@@ -1,0 +1,9 @@
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/CMakeFiles/glad.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/CMakeFiles/earth.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/CMakeFiles/rebuild_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/glfw-3.2/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/glfw-3.2/CMakeFiles/rebuild_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/glfw-3.2/src/CMakeFiles/glfw.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/glfw-3.2/src/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/earth/glfw-3.2/src/CMakeFiles/rebuild_cache.dir

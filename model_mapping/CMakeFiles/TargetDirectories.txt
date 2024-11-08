@@ -1,0 +1,10 @@
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/CMakeFiles/glad.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/CMakeFiles/model_mapping.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/CMakeFiles/rebuild_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/CMakeFiles/rebuild_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/src/CMakeFiles/update_mappings.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/src/CMakeFiles/glfw.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/src/CMakeFiles/edit_cache.dir
+/Users/ivotomasovich/Desktop/module-10-mapping-gubernatorial/model_mapping/glfw-3.3.7/src/CMakeFiles/rebuild_cache.dir

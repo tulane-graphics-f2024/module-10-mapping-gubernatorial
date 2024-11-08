@@ -138,9 +138,6 @@ bool Mesh::loadOBJ(const char * path){
 }
 
 bool Mesh::makeSphere(int steps){
-  //TODO: Normals and texture coordinates
-  normals.push_back(vec3(0,0,1));
-  uvs.push_back(vec2(0,0));
 
   double step_theta = (2*M_PI)/(double)(steps-1);
   double step_phi   = (M_PI)/(double)(steps-1);
@@ -160,20 +157,21 @@ bool Mesh::makeSphere(int steps){
     
     for(unsigned int k=0; (k+1) < pstrip0.size(); k++){
       vertices.push_back(pstrip0[k]);
-      
       vertices.push_back(pstrip1[k]);
-      
       vertices.push_back(pstrip0[k+1]);
       
       vertices.push_back(pstrip0[k+1]);
-      
       vertices.push_back(pstrip1[k]);
-       
       vertices.push_back(pstrip1[k+1]);
     }
     
     pstrip1.swap(pstrip0);
     pstrip1.clear();
+  }
+  
+  for(unsigned int i=0; i < vertices.size(); i++){
+    normals.push_back(vec3(vertices[i].x, vertices[i].y, vertices[i].z));
+    uvs.push_back(vec2((atan2(vertices[i].z, vertices[i].x)+M_PI)/(2*M_PI), (acos(vertices[i].y)/M_PI)));
   }
   
   return true;
